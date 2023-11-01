@@ -2,37 +2,11 @@
 #include <iostream>
 #include <cstddef>
 #include <string>
-#include <cmath>
-#include <vector>
 #include <set>
 #include <utility>
-#include <fstream>
 
 using std::cout;
-using std::sqrt;
-using std::abs;
 using std::size_t;
-using std::string;
-
-bool is_pentagon(size_t n)
-{
-
-    size_t i = 1;
-    size_t step = 4;
-    bool ret = false;
-    while (1)
-    {
-        if (i > n)
-            return false;
-        else if (i == n)
-            return true;
-        else
-        {
-            i += step;
-            step += 3;
-        }
-    }
-}
 
 std::pair<size_t, size_t> min_sum_diff()
 {
@@ -48,7 +22,7 @@ std::pair<size_t, size_t> min_sum_diff()
     }
     size_t curr1 = 0;
     size_t curr2 = 0;
-    size_t min_diff = string::npos;
+    size_t min_diff = std::string::npos;
     size_t counter = 0;
     for (const auto p1 : pentos)
     {

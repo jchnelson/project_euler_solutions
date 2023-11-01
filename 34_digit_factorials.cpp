@@ -50,8 +50,6 @@ int main()
 {
     auto start = std::chrono::high_resolution_clock::now();
 
-    cout << factorial(9);
-
     auto bob = all_fac_digits();
 
     auto finish = std::chrono::high_resolution_clock::now();

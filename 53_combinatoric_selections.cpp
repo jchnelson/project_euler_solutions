@@ -1,17 +1,11 @@
-#include <cmath>
 #include <cstddef>
 #include <iostream>
 #include <chrono>
-#include <string>
-#include <utility>
 #include <vector>
-#include <deque>
 
 using std::cout;
 using std::size_t;
-using std::string;
 using std::vector;
-using std::deque;
 
 double factorial(double n)
 {

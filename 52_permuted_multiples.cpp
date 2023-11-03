@@ -1,19 +1,11 @@
 #include <chrono>
 #include <iostream>
 #include <cstddef>
-#include <string>
-#include <cmath>
-#include <vector>
-#include <set>
-#include <utility>
 #include <vector>
 #include <algorithm>
 
 using std::cout;
-using std::sqrt;
-using std::abs;
 using std::size_t;
-using std::string;
 using std::vector;
 
 bool is_permut(long long cand, long long orig)

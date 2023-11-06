@@ -202,7 +202,6 @@ size_t cyclical_figurate(size_t target_n)
     heptos = make_hept();
     octos = make_oct();
 
-
     std::vector<size_t> cyclos;
     cyclos.reserve(6);
     size_t retsum = 0;
@@ -213,8 +212,6 @@ size_t cyclical_figurate(size_t target_n)
 
         if (i % 100 < 10 || find(cyclos.cbegin(), cyclos.cend(), i) != cyclos.cend())
             continue;
-        //if (i == 1089)
-        //    cout << "bob";
 
         cyclos.push_back(i);
         if (trios.count(i) != 0)

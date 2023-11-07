@@ -5,17 +5,12 @@
 #include <iostream>
 #include <algorithm>
 #include <set>
-#include <string>
 
 using std::string;
 using std::size_t;
 using std::sqrt;
 using std::abs;
 using std::cout;
-
-static size_t origsize = 0;
-static size_t reqvec = 0;
-static std::set<size_t> cubes;
 
 bool is_permut(long long cand, long long orig)
 {
@@ -89,7 +84,7 @@ size_t number_digits(size_t i)
 
 size_t cubic_permutations(size_t amount)
 {
-    reqvec = amount;
+    std::set<size_t> cubes;
     size_t ret = 0;
     for (size_t i = 0; i != 10000; ++i)
     {

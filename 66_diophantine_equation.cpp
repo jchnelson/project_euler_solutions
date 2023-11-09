@@ -67,9 +67,9 @@ std::pair<size_t, size_t> imed_sum_single(digits& biggies, size_t j, size_t orig
 
 std::pair<size_t, size_t> imed_sum_dual(digits& biggies, size_t j, size_t origcarry)
 {
-    size_t sum = 0;
+    size_t sum = origcarry;
     size_t carry = 0;
-    sum += biggies.first[j] + biggies.second[j] + origcarry;
+    sum += biggies.first[j] + biggies.second[j];
     size_t num_digits = 0;
     if (sum >= 1000000000000000)
     {
@@ -595,9 +595,6 @@ size_t diophantine_max(size_t limit)
     {
         if (is_square(d))
             continue;
-        //cout << d << '\n';
-        if (d == 181)
-            cout << "bob";
 
         auto xvec = next_convergent(d);
 
@@ -679,12 +676,6 @@ size_t diophantine_max(size_t limit)
 
 int main()
 {
-    //cout << next_convergent(61).front() << '\n';
-    //for (size_t i = 0; i != 30; ++i)
-    //{
-    //    cout << next_convergent().front() << '\n';
-    //}
-
     auto start = std::chrono::high_resolution_clock::now();
 
     auto bob = diophantine_max(1000);

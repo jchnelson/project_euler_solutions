@@ -109,6 +109,7 @@ size_t totient_permut(size_t limit)
             continue;
 
         bool prime = is_prime(i);
+
         std::set<size_t> pdivisors;
         if (!prime)
             pdivisors = prime_divisors(i);

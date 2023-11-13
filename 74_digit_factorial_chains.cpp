@@ -58,20 +58,12 @@ size_t factorial_chain_length(size_t n)
     return links.size() + added_count;
 }
 
-
 size_t digit_factorial_chains(size_t limit)
 {
     ++limit;
     size_t ret = 0;
-
-    int count = -1;
     for (size_t i = 0; i != limit; ++i)
     {
-        if (++count == 20000)
-        {
-            cout << i << '\n';
-            count = 0;
-        }
         size_t chain_length = factorial_chain_length(i);
         chains.insert({i, chain_length});
         if (chain_length == 60)
